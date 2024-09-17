@@ -5,9 +5,15 @@ const screen = {
                             <img src="${user.avatarUrl}" alt="Foto do perfil do usuário" />
                             <div class="data">
                                 <h1>${user.name ?? 'Não possui nome cadastrado'}</h1>
-                                <p>${user.bio ?? 'Não possui bio cadastrada'}</p>
+                                <p>${user.bio ?? 'Não possui bio cadastrada'}</p></br></br>
+                                <div class="follow">
+                                    <h4>👥 Seguidores</h4>
+                                    <p>${user.followers ?? 'Não possui seguidores'}</p>
+                                    <h4>👤 Seguindo</h4>
+                                    <p>${user.followings ?? 'Não possui seguidores'}</p>
                                 </div>
-                        </div>`
+                                </div>
+                            </div>`
 
         let repositoriesItens = ''
         user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
