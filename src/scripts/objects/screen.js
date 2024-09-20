@@ -7,10 +7,10 @@ const screen = {
                                 <h1>${user.name ?? 'Não possui nome cadastrado'}</h1>
                                 <p>${user.bio ?? 'Não possui bio cadastrada'}</p></br></br>
                                 <div class="follow">
-                                    <h4>👥 Seguidores</h4>
-                                    <p>${user.followers ?? 'Não possui seguidores'}</p>
-                                    <h4>👤 Seguindo</h4>
-                                    <p>${user.followings ?? 'Não possui seguidores'}</p>
+                                    <h4>${'👥 Seguidores'}</h4>
+                                    <p>${user.followers}</p>
+                                    <h4>${'🚶‍♂️ Seguindo'}</h4>
+                                    <p>${user.followings}</p>
                                 </div>
                                 </div>
                             </div>`
@@ -29,7 +29,9 @@ const screen = {
             </div>`
             
         let repositoriesItens = ''
-        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
+        user.repositories.forEach(repo => repositoriesItens += 
+            `<li><a href="${repo.html_url}" target="_blank">${repo.name} <br><br> <div><p>${' 🍴 ' + repo.forks}</p> <p>${' ⭐ ' + repo.stargazers_count}</p> <p>${' 👀 ' + repo.watchers}</p> <p>${' 👨‍💻 ' + repo.language}</p></div></a></li>`
+        )
 
         if(user.repositories.length > 0){
             this.userProfile.innerHTML += `<div class="repositories section">

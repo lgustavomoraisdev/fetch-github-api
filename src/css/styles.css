@@ -103,7 +103,13 @@ main {
   width: 50%;
 }
 
-
+.container .profile-data .info .data .follow{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+}
 
 .container .profile-data .info img{
   width: 50%;
@@ -165,6 +171,18 @@ main {
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
+.container .profile-data .repositories ul li div{
+    display: flex;
+    justify-content: center;
+    gap:5px;
+  }
+  .container .profile-data .repositories ul li p{
+    background-color: #5F26CF;
+    display: flex;
+    justify-content: center;
+    padding:5px;
+    border-radius: 5px;
+  }
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;

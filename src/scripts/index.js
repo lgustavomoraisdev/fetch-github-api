@@ -40,7 +40,7 @@ async function getUserData(userName) {
     
     const eventsResponse = await getEvents(userName)
     const repositoriesResponse = await getRepositories(userName)
-    
+
     user.setInfo(userResponse)
     user.setEvents(eventsResponse)
     user.setRepositories(repositoriesResponse)
