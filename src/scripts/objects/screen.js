@@ -14,7 +14,20 @@ const screen = {
                                 </div>
                                 </div>
                             </div>`
-
+        
+        let eventsItens = ''
+        user.events.forEach(function(events){
+            if(events.type ==='PushEvent'){
+                eventsItens += `<li><span>${events.repo.name}</span> - ${events.payload.commits[0].message}</li>`
+            } else if (events.type === 'CreateEvent'){
+                eventsItens += `<li><span>${events.repo.name}</span> - ${'Sem mensagem de commit.'}</li>`
+            }
+        })
+            this.userProfile.innerHTML += `<div class="events section">
+            <h2>Eventos</h2>
+            <ul>${eventsItens}</ul>            
+            </div>`
+            
         let repositoriesItens = ''
         user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
 

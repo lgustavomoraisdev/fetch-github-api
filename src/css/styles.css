@@ -123,6 +123,27 @@ main {
   line-height: 23px;
 }
 
+/* EVENTS */
+
+.container .profile-data .events h2{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container .profile-data .events h2 ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container .profile-data .events ul li{
+  margin-top: 20px;
+
+}
+.container .profile-data .events ul li span{
+  font-weight: 700;
+  margin-right: 10px;
+}
+
 /* REPOSITORIES */
 
 .container .profile-data .repositories h2{
